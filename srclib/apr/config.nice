@@ -1,0 +1,22 @@
+#! /bin/sh
+#
+# Created by configure
+
+CC="/usr/bin/gcc"; export CC
+CFLAGS="-g3 -gdwarf-2"; export CFLAGS
+"/spare/Telstra/httpd2.4.4/httpd-2.4.4/srclib/apr/configure" \
+"--disable-option-checking" \
+"CC=/usr/bin/gcc" \
+"CXX=" \
+"CFLAGS=-g3 -gdwarf-2" \
+"CXXFLAGS=-g3 -gdwarf-2" \
+"--cache-file=/dev/null" \
+"--srcdir=/spare/Telstra/httpd2.4.4/httpd-2.4.4/srclib/apr" \
+"--prefix=/usr/local/apache2" \
+"--exec-prefix=/usr/local/apache2" \
+"--libdir=/usr/local/apache2/lib" \
+"--includedir=/usr/local/apache2/include" \
+"--bindir=/usr/local/apache2/bin" \
+"--datadir=/usr/local/apache2" \
+"--with-installbuilddir=/usr/local/apache2/build" \
+"$@"

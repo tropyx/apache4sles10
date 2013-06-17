@@ -1,0 +1,4885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="89">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="httpd-2.4.4">
+      <df name="include">
+        <in>ap_compat.h</in>
+        <in>ap_config.h</in>
+        <in>ap_expr.h</in>
+        <in>ap_hooks.h</in>
+        <in>ap_listen.h</in>
+        <in>ap_mmn.h</in>
+        <in>ap_mpm.h</in>
+        <in>ap_provider.h</in>
+        <in>ap_regex.h</in>
+        <in>ap_regkey.h</in>
+        <in>ap_release.h</in>
+        <in>ap_slotmem.h</in>
+        <in>ap_socache.h</in>
+        <in>apache_noprobes.h</in>
+        <in>heartbeat.h</in>
+        <in>http_config.h</in>
+        <in>http_connection.h</in>
+        <in>http_core.h</in>
+        <in>http_log.h</in>
+        <in>http_main.h</in>
+        <in>http_protocol.h</in>
+        <in>http_request.h</in>
+        <in>http_vhost.h</in>
+        <in>httpd.h</in>
+        <in>mod_auth.h</in>
+        <in>mod_core.h</in>
+        <in>mod_request.h</in>
+        <in>mpm_common.h</in>
+        <in>scoreboard.h</in>
+        <in>util_cfgtree.h</in>
+        <in>util_charset.h</in>
+        <in>util_cookies.h</in>
+        <in>util_ebcdic.h</in>
+        <in>util_filter.h</in>
+        <in>util_ldap.h</in>
+        <in>util_md5.h</in>
+        <in>util_mutex.h</in>
+        <in>util_script.h</in>
+        <in>util_time.h</in>
+        <in>util_varbuf.h</in>
+        <in>util_xml.h</in>
+      </df>
+      <df name="modules">
+        <df name="aaa">
+          <in>mod_access_compat.c</in>
+          <in>mod_allowmethods.c</in>
+          <in>mod_auth_basic.c</in>
+          <in>mod_auth_digest.c</in>
+          <in>mod_auth_form.c</in>
+          <in>mod_authn_anon.c</in>
+          <in>mod_authn_core.c</in>
+          <in>mod_authn_dbd.c</in>
+          <in>mod_authn_dbm.c</in>
+          <in>mod_authn_file.c</in>
+          <in>mod_authn_socache.c</in>
+          <in>mod_authnz_ldap.c</in>
+          <in>mod_authz_core.c</in>
+          <in>mod_authz_dbd.c</in>
+          <in>mod_authz_dbd.h</in>
+          <in>mod_authz_dbm.c</in>
+          <in>mod_authz_groupfile.c</in>
+          <in>mod_authz_host.c</in>
+          <in>mod_authz_owner.c</in>
+          <in>mod_authz_user.c</in>
+        </df>
+        <df name="arch">
+          <df name="netware">
+            <in>libprews.c</in>
+            <in>mod_netware.c</in>
+            <in>mod_nw_ssl.c</in>
+          </df>
+          <df name="unix">
+            <in>mod_privileges.c</in>
+            <in>mod_unixd.c</in>
+            <in>mod_unixd.h</in>
+          </df>
+          <df name="win32">
+            <in>mod_isapi.c</in>
+            <in>mod_isapi.h</in>
+            <in>mod_win32.c</in>
+          </df>
+        </df>
+        <df name="cache">
+          <in>cache_common.h</in>
+          <in>cache_disk_common.h</in>
+          <in>cache_storage.c</in>
+          <in>cache_storage.h</in>
+          <in>cache_util.c</in>
+          <in>cache_util.h</in>
+          <in>mod_cache.c</in>
+          <in>mod_cache.h</in>
+          <in>mod_cache_disk.c</in>
+          <in>mod_cache_disk.h</in>
+          <in>mod_file_cache.c</in>
+          <in>mod_socache_dbm.c</in>
+          <in>mod_socache_dc.c</in>
+          <in>mod_socache_memcache.c</in>
+          <in>mod_socache_shmcb.c</in>
+        </df>
+        <df name="cluster">
+          <in>mod_heartbeat.c</in>
+          <in>mod_heartmonitor.c</in>
+        </df>
+        <df name="core">
+          <in>mod_so.c</in>
+          <in>mod_so.h</in>
+          <in>mod_watchdog.c</in>
+          <in>mod_watchdog.h</in>
+        </df>
+        <df name="database">
+          <in>mod_dbd.c</in>
+          <in>mod_dbd.h</in>
+        </df>
+        <df name="dav">
+          <df name="fs">
+            <in>dbm.c</in>
+            <in>lock.c</in>
+            <in>mod_dav_fs.c</in>
+            <in>repos.c</in>
+            <in>repos.h</in>
+          </df>
+          <df name="lock">
+            <in>locks.c</in>
+            <in>locks.h</in>
+            <in>mod_dav_lock.c</in>
+          </df>
+          <df name="main">
+            <in>liveprop.c</in>
+            <in>mod_dav.c</in>
+            <in>mod_dav.h</in>
+            <in>props.c</in>
+            <in>providers.c</in>
+            <in>std_liveprop.c</in>
+            <in>util.c</in>
+            <in>util_lock.c</in>
+          </df>
+        </df>
+        <df name="debugging">
+          <in>mod_bucketeer.c</in>
+          <in>mod_dumpio.c</in>
+        </df>
+        <df name="echo">
+          <in>mod_echo.c</in>
+        </df>
+        <df name="examples">
+          <in>mod_case_filter.c</in>
+          <in>mod_case_filter_in.c</in>
+          <in>mod_example_hooks.c</in>
+          <in>mod_example_ipc.c</in>
+        </df>
+        <df name="filters">
+          <in>libsed.h</in>
+          <in>mod_buffer.c</in>
+          <in>mod_charset_lite.c</in>
+          <in>mod_data.c</in>
+          <in>mod_deflate.c</in>
+          <in>mod_ext_filter.c</in>
+          <in>mod_filter.c</in>
+          <in>mod_include.c</in>
+          <in>mod_include.h</in>
+          <in>mod_proxy_html.c</in>
+          <in>mod_ratelimit.c</in>
+          <in>mod_ratelimit.h</in>
+          <in>mod_reflector.c</in>
+          <in>mod_reqtimeout.c</in>
+          <in>mod_request.c</in>
+          <in>mod_sed.c</in>
+          <in>mod_substitute.c</in>
+          <in>mod_xml2enc.c</in>
+          <in>mod_xml2enc.h</in>
+          <in>regexp.c</in>
+          <in>regexp.h</in>
+          <in>sed.h</in>
+          <in>sed0.c</in>
+          <in>sed1.c</in>
+        </df>
+        <df name="generators">
+          <in>mod_asis.c</in>
+          <in>mod_autoindex.c</in>
+          <in>mod_cgi.c</in>
+          <in>mod_cgi.h</in>
+          <in>mod_cgid.c</in>
+          <in>mod_info.c</in>
+          <in>mod_status.c</in>
+          <in>mod_status.h</in>
+          <in>mod_suexec.c</in>
+          <in>mod_suexec.h</in>
+        </df>
+        <df name="http">
+          <in>byterange_filter.c</in>
+          <in>chunk_filter.c</in>
+          <in>http_core.c</in>
+          <in>http_etag.c</in>
+          <in>http_filters.c</in>
+          <in>http_protocol.c</in>
+          <in>http_request.c</in>
+          <in>mod_mime.c</in>
+        </df>
+        <df name="ldap">
+          <in>util_ldap.c</in>
+          <in>util_ldap_cache.c</in>
+          <in>util_ldap_cache.h</in>
+          <in>util_ldap_cache_mgr.c</in>
+        </df>
+        <df name="loggers">
+          <in>mod_log_config.c</in>
+          <in>mod_log_config.h</in>
+          <in>mod_log_debug.c</in>
+          <in>mod_log_forensic.c</in>
+          <in>mod_logio.c</in>
+        </df>
+        <df name="lua">
+          <in>lua_apr.c</in>
+          <in>lua_apr.h</in>
+          <in>lua_config.c</in>
+          <in>lua_config.h</in>
+          <in>lua_dbd.c</in>
+          <in>lua_dbd.h</in>
+          <in>lua_request.c</in>
+          <in>lua_request.h</in>
+          <in>lua_vmprep.c</in>
+          <in>lua_vmprep.h</in>
+          <in>mod_lua.c</in>
+          <in>mod_lua.h</in>
+        </df>
+        <df name="mappers">
+          <in>mod_actions.c</in>
+          <in>mod_alias.c</in>
+          <in>mod_dir.c</in>
+          <in>mod_imagemap.c</in>
+          <in>mod_negotiation.c</in>
+          <in>mod_rewrite.c</in>
+          <in>mod_rewrite.h</in>
+          <in>mod_speling.c</in>
+          <in>mod_userdir.c</in>
+          <in>mod_vhost_alias.c</in>
+        </df>
+        <df name="metadata">
+          <in>mod_cern_meta.c</in>
+          <in>mod_env.c</in>
+          <in>mod_expires.c</in>
+          <in>mod_headers.c</in>
+          <in>mod_ident.c</in>
+          <in>mod_mime_magic.c</in>
+          <in>mod_remoteip.c</in>
+          <in>mod_setenvif.c</in>
+          <in>mod_unique_id.c</in>
+          <in>mod_usertrack.c</in>
+          <in>mod_version.c</in>
+        </df>
+        <df name="proxy">
+          <df name="balancers">
+            <in>mod_lbmethod_bybusyness.c</in>
+            <in>mod_lbmethod_byrequests.c</in>
+            <in>mod_lbmethod_bytraffic.c</in>
+            <in>mod_lbmethod_heartbeat.c</in>
+          </df>
+          <df name="examples">
+            <in>mod_lbmethod_rr.c</in>
+          </df>
+          <in>ajp.h</in>
+          <in>ajp_header.c</in>
+          <in>ajp_header.h</in>
+          <in>ajp_link.c</in>
+          <in>ajp_msg.c</in>
+          <in>ajp_utils.c</in>
+          <in>fcgi_protocol.h</in>
+          <in>mod_proxy.c</in>
+          <in>mod_proxy.h</in>
+          <in>mod_proxy_ajp.c</in>
+          <in>mod_proxy_balancer.c</in>
+          <in>mod_proxy_connect.c</in>
+          <in>mod_proxy_express.c</in>
+          <in>mod_proxy_fcgi.c</in>
+          <in>mod_proxy_fdpass.c</in>
+          <in>mod_proxy_fdpass.h</in>
+          <in>mod_proxy_ftp.c</in>
+          <in>mod_proxy_http.c</in>
+          <in>mod_proxy_scgi.c</in>
+          <in>proxy_util.c</in>
+          <in>proxy_util.h</in>
+        </df>
+        <df name="session">
+          <in>mod_session.c</in>
+          <in>mod_session.h</in>
+          <in>mod_session_cookie.c</in>
+          <in>mod_session_crypto.c</in>
+          <in>mod_session_dbd.c</in>
+        </df>
+        <df name="slotmem">
+          <in>mod_slotmem_plain.c</in>
+          <in>mod_slotmem_shm.c</in>
+        </df>
+        <df name="ssl">
+          <in>mod_ssl.c</in>
+          <in>mod_ssl.h</in>
+          <in>ssl_engine_config.c</in>
+          <in>ssl_engine_dh.c</in>
+          <in>ssl_engine_init.c</in>
+          <in>ssl_engine_io.c</in>
+          <in>ssl_engine_kernel.c</in>
+          <in>ssl_engine_log.c</in>
+          <in>ssl_engine_mutex.c</in>
+          <in>ssl_engine_ocsp.c</in>
+          <in>ssl_engine_pphrase.c</in>
+          <in>ssl_engine_rand.c</in>
+          <in>ssl_engine_vars.c</in>
+          <in>ssl_private.h</in>
+          <in>ssl_scache.c</in>
+          <in>ssl_util.c</in>
+          <in>ssl_util_ocsp.c</in>
+          <in>ssl_util_ssl.c</in>
+          <in>ssl_util_ssl.h</in>
+          <in>ssl_util_stapling.c</in>
+        </df>
+        <df name="test">
+          <in>mod_dialup.c</in>
+          <in>mod_optional_fn_export.c</in>
+          <in>mod_optional_fn_export.h</in>
+          <in>mod_optional_fn_import.c</in>
+          <in>mod_optional_hook_export.c</in>
+          <in>mod_optional_hook_export.h</in>
+          <in>mod_optional_hook_import.c</in>
+        </df>
+      </df>
+      <df name="os">
+        <df name="bs2000">
+          <in>ebcdic.c</in>
+          <in>ebcdic.h</in>
+          <in>os.c</in>
+          <in>os.h</in>
+        </df>
+        <df name="netware">
+          <in>modules.c</in>
+          <in>netware_config_layout.h</in>
+          <in>os.h</in>
+          <in>pre_nw.h</in>
+          <in>util_nw.c</in>
+        </df>
+        <df name="os2">
+          <in>os.h</in>
+          <in>util_os2.c</in>
+        </df>
+        <df name="unix">
+          <in>os.h</in>
+          <in>unixd.c</in>
+          <in>unixd.h</in>
+        </df>
+        <df name="win32">
+          <in>ap_regkey.c</in>
+          <in>modules.c</in>
+          <in>os.h</in>
+          <in>util_win32.c</in>
+          <in>win32_config_layout.h</in>
+        </df>
+      </df>
+      <df name="server">
+        <df name="mpm">
+          <df name="event">
+            <in>event.c</in>
+            <in>fdqueue.c</in>
+            <in>fdqueue.h</in>
+            <in>mpm_default.h</in>
+            <in>pod.c</in>
+            <in>pod.h</in>
+          </df>
+          <df name="mpmt_os2">
+            <in>mpm_default.h</in>
+            <in>mpmt_os2.c</in>
+            <in>mpmt_os2_child.c</in>
+          </df>
+          <df name="netware">
+            <in>mpm_default.h</in>
+            <in>mpm_netware.c</in>
+          </df>
+          <df name="prefork">
+            <in>mpm_default.h</in>
+            <in>prefork.c</in>
+          </df>
+          <df name="winnt">
+            <in>child.c</in>
+            <in>mpm_default.h</in>
+            <in>mpm_winnt.c</in>
+            <in>mpm_winnt.h</in>
+            <in>nt_eventlog.c</in>
+            <in>service.c</in>
+          </df>
+          <df name="worker">
+            <in>fdqueue.c</in>
+            <in>fdqueue.h</in>
+            <in>mpm_default.h</in>
+            <in>pod.c</in>
+            <in>pod.h</in>
+            <in>worker.c</in>
+          </df>
+        </df>
+        <in>buildmark.c</in>
+        <in>config.c</in>
+        <in>connection.c</in>
+        <in>core.c</in>
+        <in>core_filters.c</in>
+        <in>eoc_bucket.c</in>
+        <in>eor_bucket.c</in>
+        <in>error_bucket.c</in>
+        <in>gen_test_char.c</in>
+        <in>listen.c</in>
+        <in>log.c</in>
+        <in>main.c</in>
+        <in>mpm_common.c</in>
+        <in>mpm_unix.c</in>
+        <in>protocol.c</in>
+        <in>provider.c</in>
+        <in>request.c</in>
+        <in>scoreboard.c</in>
+        <in>util.c</in>
+        <in>util_cfgtree.c</in>
+        <in>util_charset.c</in>
+        <in>util_cookies.c</in>
+        <in>util_debug.c</in>
+        <in>util_ebcdic.c</in>
+        <in>util_expr_eval.c</in>
+        <in>util_expr_parse.c</in>
+        <in>util_expr_parse.h</in>
+        <in>util_expr_private.h</in>
+        <in>util_expr_scan.c</in>
+        <in>util_filter.c</in>
+        <in>util_md5.c</in>
+        <in>util_mutex.c</in>
+        <in>util_pcre.c</in>
+        <in>util_regex.c</in>
+        <in>util_script.c</in>
+        <in>util_time.c</in>
+        <in>util_xml.c</in>
+        <in>vhost.c</in>
+      </df>
+      <df name="srclib">
+        <df name="apr">
+          <df name="atomic">
+            <df name="netware">
+              <in>apr_atomic.c</in>
+            </df>
+            <df name="os390">
+              <in>atomic.c</in>
+            </df>
+            <df name="unix">
+              <in>builtins.c</in>
+              <in>ia32.c</in>
+              <in>mutex.c</in>
+              <in>ppc.c</in>
+              <in>s390.c</in>
+              <in>solaris.c</in>
+            </df>
+            <df name="win32">
+              <in>apr_atomic.c</in>
+            </df>
+          </df>
+          <df name="build">
+            <in>aplibtool.c</in>
+            <in>jlibtool.c</in>
+          </df>
+          <df name="dso">
+            <df name="aix">
+              <in>dso.c</in>
+            </df>
+            <df name="beos">
+              <in>dso.c</in>
+            </df>
+            <df name="netware">
+              <in>dso.c</in>
+            </df>
+            <df name="os2">
+              <in>dso.c</in>
+            </df>
+            <df name="os390">
+              <in>dso.c</in>
+            </df>
+            <df name="unix">
+              <in>dso.c</in>
+            </df>
+            <df name="win32">
+              <in>dso.c</in>
+            </df>
+          </df>
+          <df name="file_io">
+            <df name="netware">
+              <in>filepath.c</in>
+              <in>filestat.c</in>
+              <in>filesys.c</in>
+              <in>flock.c</in>
+              <in>mktemp.c</in>
+              <in>pipe.c</in>
+            </df>
+            <df name="os2">
+              <in>buffer.c</in>
+              <in>copy.c</in>
+              <in>dir.c</in>
+              <in>dir_make_recurse.c</in>
+              <in>fileacc.c</in>
+              <in>filedup.c</in>
+              <in>filepath.c</in>
+              <in>filepath_util.c</in>
+              <in>filestat.c</in>
+              <in>filesys.c</in>
+              <in>flock.c</in>
+              <in>fullrw.c</in>
+              <in>maperrorcode.c</in>
+              <in>mktemp.c</in>
+              <in>open.c</in>
+              <in>pipe.c</in>
+              <in>readwrite.c</in>
+              <in>seek.c</in>
+              <in>tempdir.c</in>
+            </df>
+            <df name="unix">
+              <in>buffer.c</in>
+              <in>copy.c</in>
+              <in>dir.c</in>
+              <in>fileacc.c</in>
+              <in>filedup.c</in>
+              <in>filepath.c</in>
+              <in>filepath_util.c</in>
+              <in>filestat.c</in>
+              <in>flock.c</in>
+              <in>fullrw.c</in>
+              <in>mktemp.c</in>
+              <in>open.c</in>
+              <in>pipe.c</in>
+              <in>readwrite.c</in>
+              <in>seek.c</in>
+              <in>tempdir.c</in>
+            </df>
+            <df name="win32">
+              <in>buffer.c</in>
+              <in>dir.c</in>
+              <in>filedup.c</in>
+              <in>filepath.c</in>
+              <in>filestat.c</in>
+              <in>filesys.c</in>
+              <in>flock.c</in>
+              <in>open.c</in>
+              <in>pipe.c</in>
+              <in>readwrite.c</in>
+              <in>seek.c</in>
+            </df>
+          </df>
+          <df name="include">
+            <df name="arch">
+              <df name="aix">
+                <in>apr_arch_dso.h</in>
+              </df>
+              <df name="beos">
+                <in>apr_arch_dso.h</in>
+                <in>apr_arch_proc_mutex.h</in>
+                <in>apr_arch_thread_cond.h</in>
+                <in>apr_arch_thread_mutex.h</in>
+                <in>apr_arch_thread_rwlock.h</in>
+                <in>apr_arch_threadproc.h</in>
+              </df>
+              <df name="netware">
+                <in>apr_arch_dso.h</in>
+                <in>apr_arch_file_io.h</in>
+                <in>apr_arch_global_mutex.h</in>
+                <in>apr_arch_internal_time.h</in>
+                <in>apr_arch_networkio.h</in>
+                <in>apr_arch_pre_nw.h</in>
+                <in>apr_arch_proc_mutex.h</in>
+                <in>apr_arch_thread_cond.h</in>
+                <in>apr_arch_thread_mutex.h</in>
+                <in>apr_arch_thread_rwlock.h</in>
+                <in>apr_arch_threadproc.h</in>
+                <in>apr_private.h</in>
+              </df>
+              <df name="os2">
+                <in>apr_arch_dso.h</in>
+                <in>apr_arch_file_io.h</in>
+                <in>apr_arch_inherit.h</in>
+                <in>apr_arch_networkio.h</in>
+                <in>apr_arch_os2calls.h</in>
+                <in>apr_arch_proc_mutex.h</in>
+                <in>apr_arch_thread_cond.h</in>
+                <in>apr_arch_thread_mutex.h</in>
+                <in>apr_arch_thread_rwlock.h</in>
+                <in>apr_arch_threadproc.h</in>
+              </df>
+              <df name="os390">
+                <in>apr_arch_dso.h</in>
+              </df>
+              <df name="unix">
+                <in>apr_arch_atomic.h</in>
+                <in>apr_arch_dso.h</in>
+                <in>apr_arch_file_io.h</in>
+                <in>apr_arch_global_mutex.h</in>
+                <in>apr_arch_inherit.h</in>
+                <in>apr_arch_internal_time.h</in>
+                <in>apr_arch_misc.h</in>
+                <in>apr_arch_networkio.h</in>
+                <in>apr_arch_poll_private.h</in>
+                <in>apr_arch_proc_mutex.h</in>
+                <in>apr_arch_shm.h</in>
+                <in>apr_arch_thread_cond.h</in>
+                <in>apr_arch_thread_mutex.h</in>
+                <in>apr_arch_thread_rwlock.h</in>
+                <in>apr_arch_threadproc.h</in>
+              </df>
+              <df name="win32">
+                <in>apr_arch_atime.h</in>
+                <in>apr_arch_dso.h</in>
+                <in>apr_arch_file_io.h</in>
+                <in>apr_arch_inherit.h</in>
+                <in>apr_arch_misc.h</in>
+                <in>apr_arch_networkio.h</in>
+                <in>apr_arch_proc_mutex.h</in>
+                <in>apr_arch_thread_cond.h</in>
+                <in>apr_arch_thread_mutex.h</in>
+                <in>apr_arch_thread_rwlock.h</in>
+                <in>apr_arch_threadproc.h</in>
+                <in>apr_arch_utf8.h</in>
+                <in>apr_dbg_win32_handles.h</in>
+                <in>apr_private.h</in>
+              </df>
+              <in>apr_private_common.h</in>
+            </df>
+            <in>apr_allocator.h</in>
+            <in>apr_atomic.h</in>
+            <in>apr_dso.h</in>
+            <in>apr_env.h</in>
+            <in>apr_errno.h</in>
+            <in>apr_file_info.h</in>
+            <in>apr_file_io.h</in>
+            <in>apr_fnmatch.h</in>
+            <in>apr_general.h</in>
+            <in>apr_getopt.h</in>
+            <in>apr_global_mutex.h</in>
+            <in>apr_hash.h</in>
+            <in>apr_inherit.h</in>
+            <in>apr_lib.h</in>
+            <in>apr_mmap.h</in>
+            <in>apr_network_io.h</in>
+            <in>apr_poll.h</in>
+            <in>apr_pools.h</in>
+            <in>apr_portable.h</in>
+            <in>apr_proc_mutex.h</in>
+            <in>apr_random.h</in>
+            <in>apr_ring.h</in>
+            <in>apr_shm.h</in>
+            <in>apr_signal.h</in>
+            <in>apr_strings.h</in>
+            <in>apr_support.h</in>
+            <in>apr_tables.h</in>
+            <in>apr_thread_cond.h</in>
+            <in>apr_thread_mutex.h</in>
+            <in>apr_thread_proc.h</in>
+            <in>apr_thread_rwlock.h</in>
+            <in>apr_time.h</in>
+            <in>apr_user.h</in>
+            <in>apr_version.h</in>
+            <in>apr_want.h</in>
+          </df>
+          <df name="locks">
+            <df name="beos">
+              <in>proc_mutex.c</in>
+              <in>thread_cond.c</in>
+              <in>thread_mutex.c</in>
+              <in>thread_rwlock.c</in>
+            </df>
+            <df name="netware">
+              <in>proc_mutex.c</in>
+              <in>thread_cond.c</in>
+              <in>thread_mutex.c</in>
+              <in>thread_rwlock.c</in>
+            </df>
+            <df name="os2">
+              <in>proc_mutex.c</in>
+              <in>thread_cond.c</in>
+              <in>thread_mutex.c</in>
+              <in>thread_rwlock.c</in>
+            </df>
+            <df name="unix">
+              <in>global_mutex.c</in>
+              <in>proc_mutex.c</in>
+              <in>thread_cond.c</in>
+              <in>thread_mutex.c</in>
+              <in>thread_rwlock.c</in>
+            </df>
+            <df name="win32">
+              <in>proc_mutex.c</in>
+              <in>thread_cond.c</in>
+              <in>thread_mutex.c</in>
+              <in>thread_rwlock.c</in>
+            </df>
+          </df>
+          <df name="memory">
+            <df name="unix">
+              <in>apr_pools.c</in>
+            </df>
+          </df>
+          <df name="misc">
+            <df name="netware">
+              <in>charset.c</in>
+              <in>libprews.c</in>
+              <in>rand.c</in>
+              <in>start.c</in>
+            </df>
+            <df name="unix">
+              <in>charset.c</in>
+              <in>env.c</in>
+              <in>errorcodes.c</in>
+              <in>getopt.c</in>
+              <in>otherchild.c</in>
+              <in>rand.c</in>
+              <in>start.c</in>
+              <in>version.c</in>
+            </df>
+            <df name="win32">
+              <in>apr_app.c</in>
+              <in>charset.c</in>
+              <in>env.c</in>
+              <in>internal.c</in>
+              <in>misc.c</in>
+              <in>rand.c</in>
+              <in>start.c</in>
+              <in>utf8.c</in>
+            </df>
+          </df>
+          <df name="mmap">
+            <df name="unix">
+              <in>common.c</in>
+              <in>mmap.c</in>
+            </df>
+            <df name="win32">
+              <in>mmap.c</in>
+            </df>
+          </df>
+          <df name="network_io">
+            <df name="beos">
+              <in>sendrecv.c</in>
+              <in>socketcommon.c</in>
+            </df>
+            <df name="os2">
+              <in>inet_ntop.c</in>
+              <in>inet_pton.c</in>
+              <in>os2calls.c</in>
+              <in>sendrecv.c</in>
+              <in>sendrecv_udp.c</in>
+              <in>sockaddr.c</in>
+              <in>socket_util.c</in>
+              <in>sockets.c</in>
+              <in>sockopt.c</in>
+            </df>
+            <df name="unix">
+              <in>inet_ntop.c</in>
+              <in>inet_pton.c</in>
+              <in>multicast.c</in>
+              <in>sendrecv.c</in>
+              <in>sockaddr.c</in>
+              <in>socket_util.c</in>
+              <in>sockets.c</in>
+              <in>sockopt.c</in>
+            </df>
+            <df name="win32">
+              <in>sendrecv.c</in>
+              <in>sockets.c</in>
+              <in>sockopt.c</in>
+            </df>
+          </df>
+          <df name="passwd">
+            <in>apr_getpass.c</in>
+          </df>
+          <df name="poll">
+            <df name="os2">
+              <in>poll.c</in>
+              <in>pollset.c</in>
+            </df>
+            <df name="unix">
+              <in>epoll.c</in>
+              <in>kqueue.c</in>
+              <in>poll.c</in>
+              <in>pollcb.c</in>
+              <in>pollset.c</in>
+              <in>port.c</in>
+              <in>select.c</in>
+            </df>
+          </df>
+          <df name="random">
+            <df name="unix">
+              <in>apr_random.c</in>
+              <in>sha2.c</in>
+              <in>sha2.h</in>
+              <in>sha2_glue.c</in>
+            </df>
+          </df>
+          <df name="shmem">
+            <df name="beos">
+              <in>shm.c</in>
+            </df>
+            <df name="os2">
+              <in>shm.c</in>
+            </df>
+            <df name="unix">
+              <in>shm.c</in>
+            </df>
+            <df name="win32">
+              <in>shm.c</in>
+            </df>
+          </df>
+          <df name="strings">
+            <in>apr_cpystrn.c</in>
+            <in>apr_fnmatch.c</in>
+            <in>apr_snprintf.c</in>
+            <in>apr_strings.c</in>
+            <in>apr_strnatcmp.c</in>
+            <in>apr_strtok.c</in>
+          </df>
+          <df name="support">
+            <df name="unix">
+              <in>waitio.c</in>
+            </df>
+          </df>
+          <df name="tables">
+            <in>apr_hash.c</in>
+            <in>apr_tables.c</in>
+          </df>
+          <df name="test">
+            <df name="internal">
+              <in>testregex.c</in>
+              <in>testucs.c</in>
+            </df>
+            <in>abts.c</in>
+            <in>abts.h</in>
+            <in>abts_tests.h</in>
+            <in>echod.c</in>
+            <in>globalmutexchild.c</in>
+            <in>mod_test.c</in>
+            <in>nw_misc.c</in>
+            <in>occhild.c</in>
+            <in>proc_child.c</in>
+            <in>readchild.c</in>
+            <in>sendfile.c</in>
+            <in>sockchild.c</in>
+            <in>sockperf.c</in>
+            <in>testapp.c</in>
+            <in>testargs.c</in>
+            <in>testatomic.c</in>
+            <in>testcond.c</in>
+            <in>testdir.c</in>
+            <in>testdso.c</in>
+            <in>testdup.c</in>
+            <in>testenv.c</in>
+            <in>testfile.c</in>
+            <in>testfilecopy.c</in>
+            <in>testfileinfo.c</in>
+            <in>testflock.c</in>
+            <in>testflock.h</in>
+            <in>testfmt.c</in>
+            <in>testfnmatch.c</in>
+            <in>testglobalmutex.c</in>
+            <in>testglobalmutex.h</in>
+            <in>testhash.c</in>
+            <in>testipsub.c</in>
+            <in>testlfs.c</in>
+            <in>testlock.c</in>
+            <in>testlockperf.c</in>
+            <in>testmmap.c</in>
+            <in>testmutexscope.c</in>
+            <in>testnames.c</in>
+            <in>testoc.c</in>
+            <in>testpath.c</in>
+            <in>testpipe.c</in>
+            <in>testpoll.c</in>
+            <in>testpools.c</in>
+            <in>testproc.c</in>
+            <in>testprocmutex.c</in>
+            <in>testrand.c</in>
+            <in>testshm.c</in>
+            <in>testshm.h</in>
+            <in>testshmconsumer.c</in>
+            <in>testshmproducer.c</in>
+            <in>testsleep.c</in>
+            <in>testsock.c</in>
+            <in>testsock.h</in>
+            <in>testsockets.c</in>
+            <in>testsockopt.c</in>
+            <in>teststr.c</in>
+            <in>teststrnatcmp.c</in>
+            <in>testtable.c</in>
+            <in>testtemp.c</in>
+            <in>testthread.c</in>
+            <in>testtime.c</in>
+            <in>testud.c</in>
+            <in>testuser.c</in>
+            <in>testutil.c</in>
+            <in>testutil.h</in>
+            <in>testvsn.c</in>
+            <in>tryread.c</in>
+          </df>
+          <df name="threadproc">
+            <df name="beos">
+              <in>apr_proc_stub.c</in>
+              <in>proc.c</in>
+              <in>thread.c</in>
+              <in>threadpriv.c</in>
+              <in>threadproc_common.c</in>
+            </df>
+            <df name="netware">
+              <in>proc.c</in>
+              <in>procsup.c</in>
+              <in>signals.c</in>
+              <in>thread.c</in>
+              <in>threadpriv.c</in>
+            </df>
+            <df name="os2">
+              <in>proc.c</in>
+              <in>signals.c</in>
+              <in>thread.c</in>
+              <in>threadpriv.c</in>
+            </df>
+            <df name="unix">
+              <in>proc.c</in>
+              <in>procsup.c</in>
+              <in>signals.c</in>
+              <in>thread.c</in>
+              <in>threadpriv.c</in>
+            </df>
+            <df name="win32">
+              <in>proc.c</in>
+              <in>signals.c</in>
+              <in>thread.c</in>
+              <in>threadpriv.c</in>
+            </df>
+          </df>
+          <df name="time">
+            <df name="unix">
+              <in>time.c</in>
+              <in>timestr.c</in>
+            </df>
+            <df name="win32">
+              <in>time.c</in>
+              <in>timestr.c</in>
+            </df>
+          </df>
+          <df name="user">
+            <df name="netware">
+              <in>groupinfo.c</in>
+              <in>userinfo.c</in>
+            </df>
+            <df name="unix">
+              <in>groupinfo.c</in>
+              <in>userinfo.c</in>
+            </df>
+            <df name="win32">
+              <in>groupinfo.c</in>
+              <in>userinfo.c</in>
+            </df>
+          </df>
+        </df>
+        <df name="apr-util">
+          <df name="buckets">
+            <in>apr_brigade.c</in>
+            <in>apr_buckets.c</in>
+            <in>apr_buckets_alloc.c</in>
+            <in>apr_buckets_eos.c</in>
+            <in>apr_buckets_file.c</in>
+            <in>apr_buckets_flush.c</in>
+            <in>apr_buckets_heap.c</in>
+            <in>apr_buckets_mmap.c</in>
+            <in>apr_buckets_pipe.c</in>
+            <in>apr_buckets_pool.c</in>
+            <in>apr_buckets_refcount.c</in>
+            <in>apr_buckets_simple.c</in>
+            <in>apr_buckets_socket.c</in>
+          </df>
+          <df name="crypto">
+            <in>apr_crypto.c</in>
+            <in>apr_crypto_nss.c</in>
+            <in>apr_crypto_openssl.c</in>
+            <in>apr_md4.c</in>
+            <in>apr_md5.c</in>
+            <in>apr_passwd.c</in>
+            <in>apr_sha1.c</in>
+            <in>crypt_blowfish.c</in>
+            <in>crypt_blowfish.h</in>
+            <in>getuuid.c</in>
+            <in>uuid.c</in>
+          </df>
+          <df name="dbd">
+            <in>apr_dbd.c</in>
+            <in>apr_dbd_freetds.c</in>
+            <in>apr_dbd_mysql.c</in>
+            <in>apr_dbd_odbc.c</in>
+            <in>apr_dbd_oracle.c</in>
+            <in>apr_dbd_pgsql.c</in>
+            <in>apr_dbd_sqlite2.c</in>
+            <in>apr_dbd_sqlite3.c</in>
+          </df>
+          <df name="dbm">
+            <df name="sdbm">
+              <in>sdbm.c</in>
+              <in>sdbm_hash.c</in>
+              <in>sdbm_lock.c</in>
+              <in>sdbm_pair.c</in>
+              <in>sdbm_pair.h</in>
+              <in>sdbm_private.h</in>
+              <in>sdbm_tune.h</in>
+            </df>
+            <in>apr_dbm.c</in>
+            <in>apr_dbm_berkeleydb.c</in>
+            <in>apr_dbm_gdbm.c</in>
+            <in>apr_dbm_ndbm.c</in>
+            <in>apr_dbm_sdbm.c</in>
+          </df>
+          <df name="encoding">
+            <in>apr_base64.c</in>
+          </df>
+          <df name="hooks">
+            <in>apr_hooks.c</in>
+          </df>
+          <df name="include">
+            <df name="private">
+              <in>apr_crypto_internal.h</in>
+              <in>apr_dbd_internal.h</in>
+              <in>apr_dbd_odbc_v2.h</in>
+              <in>apr_dbm_private.h</in>
+              <in>apu_internal.h</in>
+            </df>
+            <in>apr_anylock.h</in>
+            <in>apr_base64.h</in>
+            <in>apr_buckets.h</in>
+            <in>apr_crypto.h</in>
+            <in>apr_date.h</in>
+            <in>apr_dbd.h</in>
+            <in>apr_dbm.h</in>
+            <in>apr_hooks.h</in>
+            <in>apr_ldap_init.h</in>
+            <in>apr_ldap_option.h</in>
+            <in>apr_ldap_rebind.h</in>
+            <in>apr_ldap_url.h</in>
+            <in>apr_md4.h</in>
+            <in>apr_md5.h</in>
+            <in>apr_memcache.h</in>
+            <in>apr_optional.h</in>
+            <in>apr_optional_hooks.h</in>
+            <in>apr_queue.h</in>
+            <in>apr_reslist.h</in>
+            <in>apr_rmm.h</in>
+            <in>apr_sdbm.h</in>
+            <in>apr_sha1.h</in>
+            <in>apr_strmatch.h</in>
+            <in>apr_thread_pool.h</in>
+            <in>apr_uri.h</in>
+            <in>apr_uuid.h</in>
+            <in>apr_xlate.h</in>
+            <in>apr_xml.h</in>
+            <in>apu_errno.h</in>
+            <in>apu_version.h</in>
+          </df>
+          <df name="ldap">
+            <in>apr_ldap_init.c</in>
+            <in>apr_ldap_option.c</in>
+            <in>apr_ldap_rebind.c</in>
+            <in>apr_ldap_stub.c</in>
+            <in>apr_ldap_url.c</in>
+          </df>
+          <df name="memcache">
+            <in>apr_memcache.c</in>
+          </df>
+          <df name="misc">
+            <in>apr_date.c</in>
+            <in>apr_queue.c</in>
+            <in>apr_reslist.c</in>
+            <in>apr_rmm.c</in>
+            <in>apr_thread_pool.c</in>
+            <in>apu_dso.c</in>
+            <in>apu_version.c</in>
+          </df>
+          <df name="strmatch">
+            <in>apr_strmatch.c</in>
+          </df>
+          <df name="test">
+            <in>abts.c</in>
+            <in>abts.h</in>
+            <in>abts_tests.h</in>
+            <in>dbd.c</in>
+            <in>nw_misc.c</in>
+            <in>test_apu.h</in>
+            <in>testbuckets.c</in>
+            <in>testcrypto.c</in>
+            <in>testdate.c</in>
+            <in>testdbd.c</in>
+            <in>testdbm.c</in>
+            <in>testldap.c</in>
+            <in>testmd4.c</in>
+            <in>testmd5.c</in>
+            <in>testmemcache.c</in>
+            <in>testpass.c</in>
+            <in>testqueue.c</in>
+            <in>testreslist.c</in>
+            <in>testrmm.c</in>
+            <in>testssl.c</in>
+            <in>teststrmatch.c</in>
+            <in>testuri.c</in>
+            <in>testutil.c</in>
+            <in>testutil.h</in>
+            <in>testuuid.c</in>
+            <in>testxlate.c</in>
+            <in>testxml.c</in>
+          </df>
+          <df name="uri">
+            <in>apr_uri.c</in>
+          </df>
+          <df name="xlate">
+            <in>xlate.c</in>
+          </df>
+          <df name="xml">
+            <df name="expat">
+              <df name="lib">
+                <in>ascii.h</in>
+                <in>asciitab.h</in>
+                <in>expat.h</in>
+                <in>iasciitab.h</in>
+                <in>internal.h</in>
+                <in>latin1tab.h</in>
+                <in>map_osd_ebcdic_df04_1.h</in>
+                <in>nametab.h</in>
+                <in>osd_ebcdic_df04_1.h</in>
+                <in>utf8tab.h</in>
+                <in>winconfig.h</in>
+                <in>xmlparse.c</in>
+                <in>xmlrole.c</in>
+                <in>xmlrole.h</in>
+                <in>xmltok.c</in>
+                <in>xmltok.h</in>
+                <in>xmltok_impl.c</in>
+                <in>xmltok_impl.h</in>
+                <in>xmltok_ns.c</in>
+              </df>
+            </df>
+            <in>apr_xml.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="support">
+        <df name="win32">
+          <in>ApacheMonitor.c</in>
+          <in>ApacheMonitor.h</in>
+          <in>wintty.c</in>
+        </df>
+        <in>ab.c</in>
+        <in>checkgid.c</in>
+        <in>fcgistarter.c</in>
+        <in>htcacheclean.c</in>
+        <in>htdbm.c</in>
+        <in>htdigest.c</in>
+        <in>htpasswd.c</in>
+        <in>httxt2dbm.c</in>
+        <in>logresolve.c</in>
+        <in>passwd_common.c</in>
+        <in>passwd_common.h</in>
+        <in>rotatelogs.c</in>
+        <in>suexec.c</in>
+        <in>suexec.h</in>
+      </df>
+      <df name="test">
+        <in>cls.c</in>
+        <in>test-writev.c</in>
+        <in>test_find.c</in>
+        <in>test_limits.c</in>
+        <in>test_parser.c</in>
+        <in>test_select.c</in>
+        <in>time-sem.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="include/ap_compat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_expr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_hooks.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_listen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_mmn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_mpm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_provider.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_regex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_regkey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_release.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_slotmem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ap_socache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/apache_noprobes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/heartbeat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_core.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_log.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_main.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_protocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_request.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/http_vhost.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/httpd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mod_auth.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mod_core.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mod_request.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mpm_common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/scoreboard.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_cfgtree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_charset.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_cookies.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_ebcdic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_filter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_ldap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_mutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_script.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_varbuf.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util_xml.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/aaa/mod_access_compat.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_allowmethods.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_auth_basic.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_auth_digest.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_auth_form.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authn_anon.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authn_core.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authn_dbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authn_dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authn_file.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authn_socache.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authnz_ldap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authz_core.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authz_dbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authz_dbd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/aaa/mod_authz_dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authz_groupfile.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authz_host.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authz_owner.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/aaa/mod_authz_user.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/arch/netware/libprews.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/arch/netware/mod_netware.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/arch/netware/mod_nw_ssl.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/arch/unix/mod_privileges.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/arch/unix/mod_unixd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/arch/unix/mod_unixd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/arch/win32/mod_isapi.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/arch/win32/mod_isapi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/arch/win32/mod_win32.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/cache_common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/cache/cache_disk_common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/cache/cache_storage.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/cache_storage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/cache/cache_util.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/cache_util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/cache/mod_cache.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/mod_cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/cache/mod_cache_disk.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/mod_cache_disk.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/cache/mod_file_cache.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/mod_socache_dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/mod_socache_dc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/mod_socache_memcache.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cache/mod_socache_shmcb.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cluster/mod_heartbeat.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/cluster/mod_heartmonitor.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/core/mod_so.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/core/mod_so.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/core/mod_watchdog.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/core/mod_watchdog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/database/mod_dbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/database/mod_dbd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/dav/fs/dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/fs/lock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/fs/mod_dav_fs.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/fs/repos.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/fs/repos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/dav/lock/locks.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/lock/locks.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/dav/lock/mod_dav_lock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/main/liveprop.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/main/mod_dav.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/main/mod_dav.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/dav/main/props.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/main/providers.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/main/std_liveprop.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/main/util.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/dav/main/util_lock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/debugging/mod_bucketeer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/debugging/mod_dumpio.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/echo/mod_echo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/examples/mod_case_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/examples/mod_case_filter_in.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/examples/mod_example_hooks.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/examples/mod_example_ipc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/libsed.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/filters/mod_buffer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_charset_lite.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_data.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_deflate.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_ext_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_include.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_include.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/filters/mod_proxy_html.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_ratelimit.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_ratelimit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/filters/mod_reflector.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_reqtimeout.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_request.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_sed.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_substitute.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_xml2enc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/mod_xml2enc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/filters/regexp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/regexp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/filters/sed.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/filters/sed0.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/filters/sed1.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_asis.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_autoindex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_cgi.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_cgi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/generators/mod_cgid.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_info.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_status.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_status.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/generators/mod_suexec.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/generators/mod_suexec.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/http/byterange_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/http/chunk_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/http/http_core.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/http/http_etag.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/http/http_filters.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/http/http_protocol.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/http/http_request.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/http/mod_mime.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ldap/util_ldap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ldap/util_ldap_cache.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ldap/util_ldap_cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/ldap/util_ldap_cache_mgr.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/loggers/mod_log_config.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/loggers/mod_log_config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/loggers/mod_log_debug.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/loggers/mod_log_forensic.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/loggers/mod_logio.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/lua/lua_apr.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/lua/lua_apr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/lua/lua_config.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/lua/lua_config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/lua/lua_dbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/lua/lua_dbd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/lua/lua_request.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/lua/lua_request.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/lua/lua_vmprep.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/lua/lua_vmprep.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/lua/mod_lua.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/lua/mod_lua.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/mappers/mod_actions.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_alias.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_dir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_imagemap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_negotiation.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_rewrite.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_rewrite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/mappers/mod_speling.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_userdir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/mappers/mod_vhost_alias.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_cern_meta.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_env.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_expires.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_headers.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_ident.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_mime_magic.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_remoteip.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_setenvif.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_unique_id.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_usertrack.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/metadata/mod_version.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/ajp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/proxy/ajp_header.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/ajp_header.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/proxy/ajp_link.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/ajp_msg.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/ajp_utils.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/balancers/mod_lbmethod_bybusyness.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/balancers/mod_lbmethod_byrequests.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/balancers/mod_lbmethod_bytraffic.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/balancers/mod_lbmethod_heartbeat.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/examples/mod_lbmethod_rr.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/fcgi_protocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/proxy/mod_proxy.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/proxy/mod_proxy_ajp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_balancer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_connect.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_express.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_fcgi.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_fdpass.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_fdpass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/proxy/mod_proxy_ftp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_http.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/mod_proxy_scgi.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/proxy_util.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/proxy/proxy_util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/session/mod_session.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/session/mod_session.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/session/mod_session_cookie.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/session/mod_session_crypto.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/session/mod_session_dbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/slotmem/mod_slotmem_plain.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/slotmem/mod_slotmem_shm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/mod_ssl.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/mod_ssl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/ssl/ssl_engine_config.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_dh.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_init.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_io.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_kernel.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_log.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_mutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_ocsp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_pphrase.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_rand.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_engine_vars.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_private.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/ssl/ssl_scache.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_util.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_util_ocsp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_util_ssl.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/ssl/ssl_util_ssl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules/ssl/ssl_util_stapling.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/test/mod_dialup.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/test/mod_optional_fn_export.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/test/mod_optional_fn_export.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="modules/test/mod_optional_fn_import.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/test/mod_optional_hook_export.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="modules/test/mod_optional_hook_export.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="modules/test/mod_optional_hook_import.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/bs2000/ebcdic.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/bs2000/ebcdic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/bs2000/os.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/bs2000/os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/netware/modules.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/netware/netware_config_layout.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/netware/os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/netware/pre_nw.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/netware/util_nw.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/os2/os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/os2/util_os2.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/unix/os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/unix/unixd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/unix/unixd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/win32/ap_regkey.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/win32/modules.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/win32/os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="os/win32/util_win32.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="os/win32/win32_config_layout.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/buildmark.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/config.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/connection.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/core.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/core_filters.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/eoc_bucket.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/eor_bucket.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/error_bucket.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/gen_test_char.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/listen.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/log.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/main.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/event/event.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/event/fdqueue.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/event/fdqueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/event/mpm_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/event/pod.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/event/pod.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/mpmt_os2/mpm_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/mpmt_os2/mpmt_os2.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/mpmt_os2/mpmt_os2_child.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/netware/mpm_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/netware/mpm_netware.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/prefork/mpm_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/prefork/prefork.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/winnt/child.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/winnt/mpm_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/winnt/mpm_winnt.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/winnt/mpm_winnt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/winnt/nt_eventlog.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/winnt/service.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/worker/fdqueue.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/worker/fdqueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/worker/mpm_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/worker/pod.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm/worker/pod.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/mpm/worker/worker.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm_common.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/mpm_unix.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/protocol.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/provider.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/request.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/scoreboard.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_cfgtree.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_charset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_cookies.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_debug.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_ebcdic.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_expr_eval.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_expr_parse.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_expr_parse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/util_expr_private.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="server/util_expr_scan.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_filter.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_md5.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_mutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_pcre.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_regex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_script.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_time.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/util_xml.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="server/vhost.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_brigade.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_alloc.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_eos.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_file.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_flush.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_heap.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_mmap.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_pipe.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_pool.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_refcount.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_simple.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/buckets/apr_buckets_socket.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/apr_crypto.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/apr_crypto_nss.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/apr_crypto_openssl.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/apr_md4.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/apr_md5.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/apr_passwd.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/apr_sha1.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/crypt_blowfish.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/crypt_blowfish.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/crypto/getuuid.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/crypto/uuid.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd_freetds.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd_mysql.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd_odbc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd_oracle.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd_pgsql.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd_sqlite2.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbd/apr_dbd_sqlite3.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/apr_dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/apr_dbm_berkeleydb.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/apr_dbm_gdbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/apr_dbm_ndbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/apr_dbm_sdbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/sdbm/sdbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/sdbm/sdbm_hash.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/sdbm/sdbm_lock.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/sdbm/sdbm_pair.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/dbm/sdbm/sdbm_pair.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/dbm/sdbm/sdbm_private.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/dbm/sdbm/sdbm_tune.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/encoding/apr_base64.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/hooks/apr_hooks.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/include/apr_anylock.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_base64.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_buckets.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_crypto.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_date.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_dbd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_dbm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_hooks.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_ldap_init.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_ldap_option.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_ldap_rebind.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_ldap_url.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_md4.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_memcache.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_optional.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_optional_hooks.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_queue.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_reslist.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_rmm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_sdbm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_sha1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_strmatch.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_thread_pool.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_uri.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_uuid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_xlate.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apr_xml.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apu_errno.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/apu_version.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/private/apr_crypto_internal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/private/apr_dbd_internal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/private/apr_dbd_odbc_v2.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/private/apr_dbm_private.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/include/private/apu_internal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/ldap/apr_ldap_init.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/ldap/apr_ldap_option.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/ldap/apr_ldap_rebind.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/ldap/apr_ldap_stub.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/ldap/apr_ldap_url.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/memcache/apr_memcache.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/misc/apr_date.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/misc/apr_queue.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/misc/apr_reslist.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/misc/apr_rmm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/misc/apr_thread_pool.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/misc/apu_dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/misc/apu_version.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/strmatch/apr_strmatch.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/abts.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/abts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/test/abts_tests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/test/dbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/nw_misc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/test_apu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/test/testbuckets.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testcrypto.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testdate.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testdbd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testdbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testldap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testmd4.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testmd5.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testmemcache.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testpass.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testqueue.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testreslist.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testrmm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testssl.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/teststrmatch.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testuri.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testutil.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testutil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr-util/test/testuuid.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testxlate.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/test/testxml.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/uri/apr_uri.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/xlate/xlate.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/xml/apr_xml.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/ascii.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/asciitab.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/expat.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/iasciitab.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/internal.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/latin1tab.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/map_osd_ebcdic_df04_1.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/nametab.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/osd_ebcdic_df04_1.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/utf8tab.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/winconfig.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmlparse.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmlrole.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmlrole.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmltok.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmltok.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmltok_impl.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmltok_impl.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr-util/xml/expat/lib/xmltok_ns.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/netware/apr_atomic.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/os390/atomic.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/unix/builtins.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/unix/ia32.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/unix/mutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/unix/ppc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/unix/s390.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/unix/solaris.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/atomic/win32/apr_atomic.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/build/aplibtool.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/build/jlibtool.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/dso/aix/dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/dso/beos/dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/dso/netware/dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/dso/os2/dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/dso/os390/dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/dso/unix/dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/dso/win32/dso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/netware/filepath.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/netware/filestat.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/netware/filesys.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/netware/flock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/netware/mktemp.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/netware/pipe.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/buffer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/copy.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/dir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/dir_make_recurse.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/fileacc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/filedup.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/filepath.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/filepath_util.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/filestat.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/filesys.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/flock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/fullrw.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/maperrorcode.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/mktemp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/open.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/pipe.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/readwrite.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/seek.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/os2/tempdir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/buffer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/copy.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/dir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/fileacc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/filedup.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/filepath.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/filepath_util.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/filestat.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/flock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/fullrw.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/mktemp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/open.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/pipe.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/readwrite.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/seek.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/unix/tempdir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/buffer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/dir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/filedup.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/filepath.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/filestat.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/filesys.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/flock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/open.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/pipe.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/readwrite.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/file_io/win32/seek.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/include/apr_allocator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_dso.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_env.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_errno.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_file_info.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_file_io.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_fnmatch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_general.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_getopt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_global_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_hash.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_inherit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_lib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_mmap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_network_io.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_poll.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_pools.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_portable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_proc_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_random.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_ring.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_shm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_signal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_strings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_support.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_tables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_thread_cond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_thread_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_thread_proc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_thread_rwlock.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_user.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_version.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/apr_want.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/aix/apr_arch_dso.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/apr_private_common.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/beos/apr_arch_dso.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/beos/apr_arch_proc_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/beos/apr_arch_thread_cond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/beos/apr_arch_thread_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/beos/apr_arch_thread_rwlock.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/beos/apr_arch_threadproc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_dso.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_file_io.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_global_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_internal_time.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_networkio.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_pre_nw.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_proc_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_thread_cond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_thread_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_thread_rwlock.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_arch_threadproc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/netware/apr_private.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_dso.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_file_io.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_inherit.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_networkio.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_os2calls.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_proc_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_thread_cond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_thread_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_thread_rwlock.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os2/apr_arch_threadproc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/os390/apr_arch_dso.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_atomic.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_dso.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_file_io.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_global_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_inherit.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_internal_time.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_misc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_networkio.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_poll_private.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_proc_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_shm.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_thread_cond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_thread_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_thread_rwlock.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/unix/apr_arch_threadproc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_atime.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_dso.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_file_io.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_inherit.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_misc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_networkio.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_proc_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_thread_cond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_thread_mutex.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_thread_rwlock.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_threadproc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_arch_utf8.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_dbg_win32_handles.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/include/arch/win32/apr_private.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="srclib/apr/locks/beos/proc_mutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/beos/thread_cond.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/beos/thread_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/beos/thread_rwlock.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/netware/proc_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/netware/thread_cond.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/netware/thread_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/netware/thread_rwlock.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/os2/proc_mutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/os2/thread_cond.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/os2/thread_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/os2/thread_rwlock.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/unix/global_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/unix/proc_mutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/unix/thread_cond.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/unix/thread_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/unix/thread_rwlock.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/win32/proc_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/win32/thread_cond.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/win32/thread_mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/locks/win32/thread_rwlock.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/memory/unix/apr_pools.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/netware/charset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/netware/libprews.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/netware/rand.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/netware/start.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/charset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/env.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/errorcodes.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/getopt.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/otherchild.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/rand.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/start.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/unix/version.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/apr_app.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/charset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/env.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/internal.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/misc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/rand.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/start.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/misc/win32/utf8.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/mmap/unix/common.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/mmap/unix/mmap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/mmap/win32/mmap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/beos/sendrecv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/beos/socketcommon.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/inet_ntop.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/inet_pton.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/os2calls.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/sendrecv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/sendrecv_udp.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/sockaddr.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/socket_util.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/sockets.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/os2/sockopt.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/inet_ntop.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/inet_pton.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/multicast.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/sendrecv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/sockaddr.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/socket_util.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/sockets.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/unix/sockopt.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/win32/sendrecv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/win32/sockets.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/network_io/win32/sockopt.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/passwd/apr_getpass.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/os2/poll.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/os2/pollset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/unix/epoll.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/unix/kqueue.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/unix/poll.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/unix/pollcb.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/unix/pollset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/unix/port.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/poll/unix/select.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/random/unix/apr_random.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/random/unix/sha2.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/random/unix/sha2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/random/unix/sha2_glue.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/shmem/beos/shm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/shmem/os2/shm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/shmem/unix/shm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/shmem/win32/shm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/strings/apr_cpystrn.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/strings/apr_fnmatch.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/strings/apr_snprintf.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/strings/apr_strings.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/strings/apr_strnatcmp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/strings/apr_strtok.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/support/unix/waitio.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/tables/apr_hash.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/tables/apr_tables.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/abts.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/abts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/test/abts_tests.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/test/echod.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/globalmutexchild.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/internal/testregex.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/internal/testucs.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/mod_test.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/nw_misc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/occhild.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/proc_child.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/readchild.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/sendfile.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/sockchild.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/sockperf.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testapp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testargs.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testatomic.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testcond.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testdir.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testdso.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testdup.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testenv.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testfile.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testfilecopy.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testfileinfo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testflock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testflock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/test/testfmt.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testfnmatch.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testglobalmutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testglobalmutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/test/testhash.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testipsub.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testlfs.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testlock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testlockperf.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testmmap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testmutexscope.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testnames.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testoc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testpath.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testpipe.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testpoll.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testpools.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testproc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testprocmutex.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testrand.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testshm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testshm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/test/testshmconsumer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testshmproducer.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testsleep.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testsock.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testsock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/test/testsockets.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testsockopt.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/teststr.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/teststrnatcmp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testtable.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testtemp.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testthread.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testtime.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testud.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testuser.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testutil.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/testutil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="srclib/apr/test/testvsn.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/test/tryread.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/beos/apr_proc_stub.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/beos/proc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/beos/thread.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/beos/threadpriv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/beos/threadproc_common.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/netware/proc.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/netware/procsup.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/netware/signals.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/netware/thread.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/netware/threadpriv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/os2/proc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/os2/signals.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/os2/thread.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/os2/threadpriv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/unix/proc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/unix/procsup.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/unix/signals.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/unix/thread.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/unix/threadpriv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/win32/proc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/win32/signals.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/win32/thread.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/threadproc/win32/threadpriv.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/time/unix/time.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/time/unix/timestr.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/time/win32/time.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/time/win32/timestr.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/user/netware/groupinfo.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/user/netware/userinfo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/user/unix/groupinfo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/user/unix/userinfo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/user/win32/groupinfo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="srclib/apr/user/win32/userinfo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/ab.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/checkgid.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/fcgistarter.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/htcacheclean.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/htdbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/htdigest.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/htpasswd.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/httxt2dbm.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/logresolve.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/passwd_common.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/passwd_common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="support/rotatelogs.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/suexec.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/suexec.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="support/win32/ApacheMonitor.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="support/win32/ApacheMonitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="support/win32/wintty.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="test/cls.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="test/test-writev.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="test/test_find.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="test/test_limits.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="test/test_parser.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="test/test_select.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="test/time-sem.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
