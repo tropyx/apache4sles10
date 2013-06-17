@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="89">
+<configurationDescriptor version="88">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="httpd-2.4.4">
-      <df name="build">
-        <df name="aix">
-        </df>
-        <df name="pkg">
-        </df>
-        <df name="rpm">
-        </df>
-        <df name="win32">
-        </df>
-      </df>
       <df name="docs">
         <df name="cgi-examples">
         </df>
@@ -57,15 +47,9 @@
           <df name="style">
             <df name="css">
             </df>
-            <df name="lang">
-            </df>
             <df name="latex">
             </df>
             <df name="scripts">
-            </df>
-            <df name="xsl">
-              <df name="util">
-              </df>
             </df>
           </df>
           <df name="vhosts">
@@ -648,8 +632,6 @@
                 <in>apr_arch_thread_mutex.h</in>
                 <in>apr_arch_thread_rwlock.h</in>
                 <in>apr_arch_threadproc.h</in>
-              </df>
-              <df name="darwin">
               </df>
               <df name="netware">
                 <in>apr_arch_dso.h</in>
@@ -1281,6 +1263,7 @@
         <in>test_select.c</in>
         <in>time-sem.c</in>
       </df>
+      <in>confdefs.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -1290,18 +1273,6 @@
         <developmentServer>localhost</developmentServer>
         <platform>2</platform>
       </toolsSet>
-      <compile>
-        <compiledirpicklist>
-          <compiledirpicklistitem>.</compiledirpicklistitem>
-          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
-        </compiledirpicklist>
-        <compiledir>${AUTO_FOLDER}</compiledir>
-        <compilecommandpicklist>
-          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
-          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
-        </compilecommandpicklist>
-        <compilecommand>${AUTO_COMPILE}</compilecommand>
-      </compile>
       <dbx_gdbdebugger version="1">
         <gdb_pathmaps>
         </gdb_pathmaps>
