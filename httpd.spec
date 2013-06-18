@@ -8,17 +8,23 @@ Version: 2.4.4
 Release: 1
 URL: http://httpd.apache.org/
 Vendor: Apache Software Foundation
-Source0: http://www.apache.org/dist/httpd/httpd-%{version}.tar.bz2
+Source0: httpd-%{version}-APR.tar.bz2
 License: Apache License, Version 2.0
 Group: System Environment/Daemons
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: autoconf, perl, pkgconfig, findutils
-BuildRequires: zlib-devel, libselinux-devel
-BuildRequires: apr-devel >= 1.4.0, apr-util-devel >= 1.4.0, pcre-devel >= 5.0
+BuildRequires: zlib-devel, pcre-devel >= 5.0
+
+# %if 0%{?fedora}
+# BuildRequires: libselinux-devel
+# BuildRequires: apr-devel >= 1.4.0, apr-util-devel >= 1.4.0
+# %endif
+
+
 Requires: initscripts >= 8.36, /etc/mime.types
 Obsoletes: httpd-suexec
 Requires(pre): /usr/sbin/useradd
-Requires(post): chkconfig
+# Requires(post): chkconfig
 Provides: webserver
 Provides: mod_dav = %{version}-%{release}, httpd-suexec = %{version}-%{release}
 Provides: httpd-mmn = %{mmn}
@@ -63,26 +69,26 @@ Summary: Tools for use with the Apache HTTP Server
 The httpd-tools package contains tools which can be used with 
 the Apache HTTP Server.
 
-%package -n mod_authnz_ldap
-Group: System Environment/Daemons
-Summary: LDAP modules for the Apache HTTP server
-BuildRequires: openldap-devel
-Requires: httpd = %{version}-%{release}, httpd-mmn = %{mmn}
+# %package -n mod_authnz_ldap
+# Group: System Environment/Daemons
+# Summary: LDAP modules for the Apache HTTP server
+# BuildRequires: openldap-devel
+# Requires: httpd = %{version}-%{release}, httpd-mmn = %{mmn}
+# 
+# %description -n mod_authnz_ldap
+# The mod_authnz_ldap module for the Apache HTTP server provides
+# authentication and authorization against an LDAP server, while
+# mod_ldap provides an LDAP cache.
 
-%description -n mod_authnz_ldap
-The mod_authnz_ldap module for the Apache HTTP server provides
-authentication and authorization against an LDAP server, while
-mod_ldap provides an LDAP cache.
-
-%package -n mod_lua
-Group: System Environment/Daemons
-Summary: Lua language module for the Apache HTTP server
-BuildRequires: lua-devel
-Requires: httpd = %{version}-%{release}, httpd-mmn = %{mmn}
-
-%description -n mod_lua
-The mod_lua module for the Apache HTTP server allows the server to be
-extended with scripts written in the Lua programming language.
+# %package -n mod_lua
+# Group: System Environment/Daemons
+# Summary: Lua language module for the Apache HTTP server
+# BuildRequires: lua-devel
+# Requires: httpd = %{version}-%{release}, httpd-mmn = %{mmn}
+# 
+# %description -n mod_lua
+# The mod_lua module for the Apache HTTP server allows the server to be
+# extended with scripts written in the Lua programming language.
 
 %package -n mod_proxy_html
 Group: System Environment/Daemons
@@ -97,15 +103,15 @@ a filter to rewrite HTML links within web content when used within
 a reverse proxy environment. The mod_xml2enc module provides
 enhanced charset/internationalisation support for mod_proxy_html.
 
-%package -n mod_socache_dc
-Group: System Environment/Daemons
-Summary: Distcache shared object cache module for the Apache HTTP server
-BuildRequires: distcache-devel
-Requires: httpd = %{version}-%{release}, httpd-mmn = %{mmn}
-
-%description -n mod_socache_dc
-The mod_socache_dc module for the Apache HTTP server allows the shared
-object cache to use the distcache shared caching mechanism.
+# %package -n mod_socache_dc
+# Group: System Environment/Daemons
+# Summary: Distcache shared object cache module for the Apache HTTP server
+# BuildRequires: distcache-devel
+# Requires: httpd = %{version}-%{release}, httpd-mmn = %{mmn}
+# 
+# %description -n mod_socache_dc
+# The mod_socache_dc module for the Apache HTTP server allows the shared
+# object cache to use the distcache shared caching mechanism.
 
 %package -n mod_ssl
 Group: System Environment/Daemons
@@ -134,8 +140,6 @@ if test "x${vmmn}" != "x%{mmn}"; then
 fi
 
 %build
-# forcibly prevent use of bundled apr, apr-util, pcre
-rm -rf srclib/{apr,apr-util,pcre}
 
 %configure \
 	--enable-layout=RPM \
@@ -144,21 +148,21 @@ rm -rf srclib/{apr,apr-util,pcre}
 	--includedir=%{_includedir}/httpd \
 	--libexecdir=%{_libdir}/httpd/modules \
 	--datadir=%{contentdir} \
-        --with-installbuilddir=%{_libdir}/httpd/build \
-        --enable-mpms-shared=all \
-        --with-apr=%{_prefix} --with-apr-util=%{_prefix} \
+    --with-installbuilddir=%{_libdir}/httpd/build \
+    --enable-mpms-shared=all \
+    --with-included-apr \
 	--enable-suexec --with-suexec \
 	--with-suexec-caller=%{suexec_caller} \
 	--with-suexec-docroot=%{contentdir} \
 	--with-suexec-logfile=%{_localstatedir}/log/httpd/suexec.log \
 	--with-suexec-bin=%{_sbindir}/suexec \
 	--with-suexec-uidmin=500 --with-suexec-gidmin=100 \
-        --enable-pie \
-        --with-pcre \
-        --enable-mods-shared=all \
-        --enable-ssl --with-ssl --enable-socache-dc --enable-bucketeer \
-        --enable-case-filter --enable-case-filter-in \
-        --disable-imagemap
+    --enable-pie \
+    --with-pcre \
+    --enable-mods-shared=all \
+    --enable-ssl --with-ssl --enable-bucketeer \
+    --enable-case-filter --enable-case-filter-in \
+    --disable-imagemap
 
 make %{?_smp_mflags}
 
@@ -247,6 +251,11 @@ root@${FQDN}
 EOF
 fi
 
+# make sure the web manual is not here
+# rm -rf %{contentdir}/manual
+# rm -rf /var/www/manual
+
+
 %check
 # Check the built modules are all PIC
 if readelf -d $RPM_BUILD_ROOT%{_libdir}/httpd/modules/*.so | grep TEXTREL; then
@@ -259,6 +268,88 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
+/usr/bin/apr-1-config
+/usr/bin/apu-1-config
+
+%if 0%{?sles_version} || 0%{?suse_version}
+%ifarch i586
+/usr/lib/apr.exp
+/usr/lib/aprutil.exp
+/usr/lib/httpd/build/libtool
+/usr/lib/httpd/build/make_exports.awk
+/usr/lib/httpd/build/make_var_export.awk
+/usr/lib/libapr-1.a
+/usr/lib/libapr-1.la
+/usr/lib/libapr-1.so
+/usr/lib/libapr-1.so.0
+/usr/lib/libapr-1.so.0.4.6
+/usr/lib/libaprutil-1.a
+/usr/lib/libaprutil-1.la
+/usr/lib/libaprutil-1.so
+/usr/lib/libaprutil-1.so.0
+/usr/lib/libaprutil-1.so.0.5.2
+/usr/lib/libexpat.a
+/usr/lib/libexpat.la
+/usr/lib/libexpat.so
+/usr/lib/libexpat.so.0
+/usr/lib/libexpat.so.0.5.0
+/usr/lib/pkgconfig/apr-1.pc
+/usr/lib/pkgconfig/apr-util-1.pc
+%endif
+
+%ifarch x86_64
+/usr/lib64/apr.exp
+/usr/lib64/aprutil.exp
+/usr/lib64/httpd/build/libtool
+/usr/lib64/httpd/build/make_exports.awk
+/usr/lib64/httpd/build/make_var_export.awk
+/usr/lib64/libapr-1.a
+/usr/lib64/libapr-1.la
+/usr/lib64/libapr-1.so
+/usr/lib64/libapr-1.so.0
+/usr/lib64/libapr-1.so.0.4.6
+/usr/lib64/libaprutil-1.a
+/usr/lib64/libaprutil-1.la
+/usr/lib64/libaprutil-1.so
+/usr/lib64/libaprutil-1.so.0
+/usr/lib64/libaprutil-1.so.0.5.2
+/usr/lib64/libexpat.a
+/usr/lib64/libexpat.la
+/usr/lib64/libexpat.so
+/usr/lib64/libexpat.so.0
+/usr/lib64/libexpat.so.0.5.0
+/usr/lib64/pkgconfig/apr-1.pc
+/usr/lib64/pkgconfig/apr-util-1.pc
+%endif
+%endif
+
+
+%if 0%{?fedora_version}
+
+/usr/lib/apr.exp
+/usr/lib/aprutil.exp
+/usr/lib/httpd/build/libtool
+/usr/lib/httpd/build/make_exports.awk
+/usr/lib/httpd/build/make_var_export.awk
+/usr/lib/libapr-1.a
+/usr/lib/libapr-1.la
+/usr/lib/libapr-1.so
+/usr/lib/libapr-1.so.0
+/usr/lib/libapr-1.so.0.4.6
+/usr/lib/libaprutil-1.a
+/usr/lib/libaprutil-1.la
+/usr/lib/libaprutil-1.so
+/usr/lib/libaprutil-1.so.0
+/usr/lib/libaprutil-1.so.0.5.2
+/usr/lib/pkgconfig/apr-1.pc
+/usr/lib/pkgconfig/apr-util-1.pc
+
+
+%endif
+
+
+
+
 
 %doc ABOUT_APACHE README CHANGES LICENSE NOTICE
 
@@ -389,7 +480,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/httpd/modules/mod_rewrite.so
 %{_libdir}/httpd/modules/mod_sed.so
 %{_libdir}/httpd/modules/mod_session_cookie.so
-%{_libdir}/httpd/modules/mod_session_crypto.so
+# %{_libdir}/httpd/modules/mod_session_crypto.so
 %{_libdir}/httpd/modules/mod_session_dbd.so
 %{_libdir}/httpd/modules/mod_session.so
 %{_libdir}/httpd/modules/mod_setenvif.so
@@ -457,23 +548,23 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/rotatelogs.8*
 %doc LICENSE NOTICE
 
-%files -n mod_authnz_ldap
-%defattr(-,root,root)
-%{_libdir}/httpd/modules/mod_ldap.so
-%{_libdir}/httpd/modules/mod_authnz_ldap.so
+# %files -n mod_authnz_ldap
+# %defattr(-,root,root)
+# %{_libdir}/httpd/modules/mod_ldap.so
+# %{_libdir}/httpd/modules/mod_authnz_ldap.so
 
-%files -n mod_lua
-%defattr(-,root,root)
-%{_libdir}/httpd/modules/mod_lua.so
+# %files -n mod_lua
+# %defattr(-,root,root)
+# %{_libdir}/httpd/modules/mod_lua.so
 
 %files -n mod_proxy_html
 %defattr(-,root,root)
 %{_libdir}/httpd/modules/mod_proxy_html.so
 %{_libdir}/httpd/modules/mod_xml2enc.so
 
-%files -n mod_socache_dc
-%defattr(-,root,root)
-%{_libdir}/httpd/modules/mod_socache_dc.so
+# %files -n mod_socache_dc
+# %defattr(-,root,root)
+# %{_libdir}/httpd/modules/mod_socache_dc.so
 
 %files -n mod_ssl
 %defattr(-,root,root)
@@ -499,4 +590,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/httpd/build/instdso.sh
 %{_libdir}/httpd/build/config.nice
 %{_libdir}/httpd/build/mkdir.sh
+
 
