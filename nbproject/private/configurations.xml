@@ -1281,6 +1281,7 @@
         <in>test_select.c</in>
         <in>time-sem.c</in>
       </df>
+      <in>confdefs.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
